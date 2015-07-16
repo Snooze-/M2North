@@ -1,0 +1,21 @@
+{
+  "name": "m2north",
+  "version": "0.0.0",
+  "authors": [
+    "derick@derick.co.za"
+  ],
+  "description": "M2North Programming Assessment",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "bootstrap3-typeahead": "~3.1.1"
+  }
+}

@@ -4,6 +4,7 @@
   "authors": [
     "derick@derick.co.za"
   ],
+  "homepage": "https://github.com/Snooze-/M2North",
   "description": "M2North Programming Assessment",
   "main": "index.html",
   "license": "MIT",

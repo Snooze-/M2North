@@ -1,21 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>M2North Assessment - Derick Kemp</title>
+
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
+        <!-- App specific styles -->
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/climacons-font.css">
+
         <!-- Latest compiled and minified JavaScript -->
         <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/bower_components/bootstrap3-typeahead/bootstrap3-typeahead.min.js"></script>
+        <script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
 
         <!-- JavaScript for the app itself -->
         <script type="text/javascript" src="/js/app.js"></script>
     </head>
     <body>
-        <!-- Set autocomplete off to disable browser dropdown -->
-        <input class="typeahead" type="text" autocomplete="off" />
+        <div class="container">
+            <div class="header clearfix">
+                <h3 class="text-muted">M2North Assessment</h3>
+            </div>
+
+            <div class="jumbotron" id="prompt">
+                <h1><span >Please select a town</span></h1>
+            </div>
+
+            <div id="infobox" class="jumbotron hidden">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1><span id="city"></span> <small id="state"></small></h1>
+                        <div class="text-center"><span id="selected-glyph"></span></div>
+                        <h2 class="text-center"><span id="weather-description"></span></h2>
+                    </div>
+                    <div class="col-md-6">
+                        <h2><span id="date"></span></h2>
+                        <h3>Temperatures</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>High</h4>
+                                <p><span id="hightemp-fahr"></span><span class="climacon fahrenheit"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Low</h4>
+                                <p><span id="lowtemp-fahr"></span><span class="climacon fahrenheit"></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>High</h4>
+                                <p><span id="hightemp-cels"></span><span class="climacon celsius"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Low</h4>
+                                <p><span id="lowtemp-cels"></span><span class="climacon celsius"></span></p>
+                            </div>
+                        </div>
+                        <h3>Probability of Precipiation</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Day</h4>
+                                <p id="precipday"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Night</h4>
+                                <p id="precipnight"></p>
+                            </div>
+                        </div>
+                        <h3>Weather Station</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="station"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day-picker" class="btn-group btn-group-justified hidden" role="group">
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+                <a class="btn btn-default"><span class="day-glyph"></span><p class="day-date"></p></a>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Town</span>
+                <!-- Set autocomplete off to disable browser dropdown -->
+                <input autocomplete="off" type="text" class="form-control typeahead" placeholder="Username">
+            </div>
+        </div>
     </body>
 </html>

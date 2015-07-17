@@ -1,0 +1,19 @@
+#selected-glyph {
+    font-size: 20em;
+}
+
+div#day-picker {
+    margin-bottom: 30px;
+}
+
+div#day-picker span.day-glyph {
+    font-size: 3em;
+}
+
+#hightemp-fahr, #hightemp-cels {
+    color: #6B0000;
+}
+
+#lowtemp-fahr, #lowtemp-cels {
+    color: #006B6B;
+}

@@ -1,6 +1,9 @@
 <?php
 
-require_once(implode(DIRECTORY_SEPARATOR, array(__DIR__, 'krumo', 'class.krumo.php')));
+// This is the library directory root where composer installs things
+define('VENDOR_DIR', implode(DIRECTORY_SEPARATOR, array(__DIR__, 'vendor')));
+
+require_once(implode(DIRECTORY_SEPARATOR, array(VENDOR_DIR, 'oodle', 'krumo', 'class.krumo.php')));
 
 $client = new SoapClient("http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL");
 

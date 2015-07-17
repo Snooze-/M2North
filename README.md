@@ -35,4 +35,4 @@ Tested On
 This has been tested on
 
 * Arch Linux 64 bit / Apache 2.4 / PHP 5.6
-* Centos 7 64 bit / Nginx 1.8.0 + php-fpm / PHP 5.3
+* Centos 7 64 bit / Nginx 1.8.0 + php-fpm / PHP 5.4
